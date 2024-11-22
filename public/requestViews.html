@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Requests</title>
+    <style>
+        /* Basic styles for the request list */
+        .request {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submitted Requests</h1>
+    <div id="requestList"></div>
+
+    <script>
+        async function fetchRequests() {
+            try {
+                const response = await fetch('/api/requests'); // Fetch requests from the backend
+                const requests = await response.json();
+
+                const requestList = document.getElementById('requestList');
+                requestList.innerHTML = ''; // Clear previous content
+
+                requests.forEach(request => {
+                    const requestItem = document.createElement('div');
+                    requestItem.classList.add('request');
+                    requestItem.innerHTML = `
+                        <h3>${request.name}</h3>
+                        <p><strong>Description:</strong> ${request.description}</p>
+                        <p><strong>Budget:</strong> ₦${request.budget}</p>
+                        <p><strong>WhatsApp:</strong> ${request.whatsappNumber}</p>
+                        <img src="/uploads/${request.image}" alt="${request.name}" width="150" />
+                    `;
+                    requestList.appendChild(requestItem);
+                });
+            } catch (error) {
+                console.error("Error fetching requests:", error);
+                document.getElementById('requestList').textContent = 'Failed to load requests.';
+            }
+        }
+
+        // Fetch and display requests when the page loads
+        window.onload = fetchRequests;
+    </script>
+</body>
+</html>

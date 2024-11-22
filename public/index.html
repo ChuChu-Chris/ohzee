@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHzee.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body class="bodyIndex">
+<section class="left_body">
+    <header class="left_body_hdr">
+        <h1>
+            <a href="index.html">OHzee.com</a>
+        </h1>
+        <ul class="flexRow">
+            <li>
+                <a href="whyus.html">Why Us?</a>
+            </li>
+            <!-- <li>
+                <a href="#">register/login</a>
+            </li> -->
+        </ul>
+    </header>
+    <div class="slideImage">
+        <!-- <aside> -->
+            
+            <div class="hero">
+            <img id="hero-image" src="./img/FM-1849-04.jpg" alt="Slideshow Image" />
+            </div>
+          
+        <!-- </aside> -->
+    </div>
+    <footer>
+        <ul class="flexRow"> 
+        <li>
+            <a href="aboutus.html">About us</a>
+        </li>
+        <li>
+            <a href="contactus.html">Contact us</a>
+        </li>
+        <li>
+            <a href="faqhtml.html">FAQ</a>
+        </li>
+        <li>
+            <a href="policy.html">Policy</a>
+        </li>
+        <!-- <li></li> -->
+        </ul>
+        <p>
+            &COPY; Ohzedapp.com 2024
+        </p>
+    </footer>
+</section>
+
+    <div class="container">
+        <h1>Make a Request</h1>
+        <form id="requestForm">
+            <label for="name">Item Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="budget">Budget (₦):</label>
+            <input type="number" id="budget" name="budget" required>
+
+            <label for="whatsappNumber">WhatsApp Number:</label>
+            <input type="text" id="whatsappNumber" name="whatsappNumber" required>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+        <p id="statusMessage"></p>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

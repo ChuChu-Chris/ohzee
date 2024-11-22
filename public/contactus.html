@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        /* Hero Section */
+        .hero {
+            /* background: url('img/aboutus.PNG') center/cover no-repeat; */
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: rgba(0, 0, 0, 0.6); */
+            background-color:  rgba(25, 215, 250,.3);
+            opacity: .8;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            z-index: 1;
+        }
+        /* Contact Form Section */
+        .contact-form-section {
+            padding: 50px 10%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .contact-details, .form-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            padding: 20px;
+        }
+        .contact-details h2, .form-container h2 {
+            margin-bottom: 20px;
+        }
+        /* Contact Details */
+        .contactHdr{
+            background-color: #FFD700;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            color: #666;
+
+        }
+        .contact-info li {
+            margin: 15px 0;
+            font-size: 1rem;
+        }
+        .contact-info li i {
+            color: #FFD700;
+            margin-right: 10px;
+        }
+        /* Form Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #FFD700;
+            outline: none;
+        }
+        .contact-form button {
+            margin-top: 20px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFD700;
+            color: #333;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #ffcc00;
+        }
+        /* Social Media Links */
+        .social-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #FFD700;
+        }
+        /* Map Section */
+        .map {
+            width: 100%;
+            height: 400px;
+            background-color: rgba(61, 53, 5,.2);
+            /* background-color: #e0e0e0; */
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body><header class="left_body_hdr">
+    <h1>
+        <a href="#">OHzee.com</a>
+    </h1>
+    <ul class="flexRow">
+        <li>
+            <a href="whyus.html">Why Us?</a>
+        </li>
+        <!-- <li>
+            <a href="#">register/login</a>
+        </li> -->
+    </ul>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <!-- <h2>Buy what you want, and pay what you budget!</h2> -->
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <h2 class="underlineYellowtext">Get In Touch</h2>
+            <p><span class="someylwbg">We’re here to help!</span>  Reach out to us via the form or any of the following methods:</p>
+            <ul class="contact-info">
+                <li><i class="fas fa-phone-alt"></i>  <span style="color: darkgreen;padding: 3%;margin: 2% auto;">Phone:</span> +123-456-7890</li>
+                <li><i class="fas fa-envelope"></i> <span style="color: darkred;padding: 3%;">Email:</span> info@example.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> <span style="color: darkblue; padding: 3%;">Address:</span> 123 Market Street, City, Country</li>
+            </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-container">
+            <h2 class="contactHdr">Contact Form</h2>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <h2>Follow Us</h2>
+        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i>fb</a>
+        <a href="#" target="_blank"><i class="fab fa-twitter-square"></i>x</a>
+        <a href="#" target="_blank"><i class="fab fa-instagram-square"></i>ig</a>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map">
+        <!-- Embed a map iframe here (e.g., Google Maps iframe) -->
+        <iframe src="https://maps.google.com/maps?q=New+York&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <footer>
+        <ul class="flexRow"> 
+        <li>
+            <a href="aboutus.html">About us</a>
+        </li>
+        <li>
+            <a href="contactus.html">Contact us</a>
+        </li>
+        <li>
+            <a href="faqhtml.html">FAQ</a>
+        </li>
+        <li>
+            <a href="policy.html">Policy</a>
+        </li>
+        <!-- <li></li> -->
+        </ul>
+        <p>
+            &COPY; Ohzedapp.com 2024
+        </p>
+    </footer>
+
+    <!-- Font Awesome CDN for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
